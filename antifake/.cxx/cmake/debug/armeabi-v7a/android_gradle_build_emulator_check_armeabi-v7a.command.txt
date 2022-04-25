@@ -1,0 +1,7 @@
+Executable : /Users/personal/Library/Android/sdk/cmake/3.18.1/bin/ninja
+arguments : 
+-C
+/Users/personal/prj/demo/CacheEmulatorChecker/antifake/.cxx/cmake/debug/armeabi-v7a
+emulator_check
+jvmArgs : 
+

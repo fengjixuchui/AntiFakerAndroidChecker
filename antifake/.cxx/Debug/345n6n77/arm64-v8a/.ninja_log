@@ -1,0 +1,4 @@
+# ninja log v5
+0	381	1650863130	CMakeFiles/emulator_check.dir/src/main/jni/emulator/emcheck64.c.o	4ecf0e923fe8eed9
+382	459	1650863130	../../../../build/intermediates/cxx/Debug/345n6n77/obj/arm64-v8a/libemulator_check.so	5e57e166b98d77d2
+1	74	1650863276	../../../../build/intermediates/cxx/Debug/345n6n77/obj/arm64-v8a/libemulator_check.so	5e57e166b98d77d2

@@ -1,0 +1,3 @@
+# ninja log v5
+0	136	1650863319	CMakeFiles/emulator_check.dir/src/main/jni/emulator/emcheck64.c.o	33acae9c5a6b55f
+136	206	1650863319	../../../../build/intermediates/cxx/Debug/345n6n77/obj/armeabi-v7a/libemulator_check.so	1ffb783ccc6ef18

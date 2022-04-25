@@ -1,0 +1,20 @@
+{
+  "buildFiles": [
+    "/Users/personal/prj/demo/CacheEmulatorChecker/antifake/CMakeLists.txt",
+    "/Users/personal/Library/Android/sdk/ndk/21.1.6352462/build/cmake/android.toolchain.cmake",
+    "/Users/personal/Library/Android/sdk/ndk/21.1.6352462/build/cmake/platforms.cmake"
+  ],
+  "cleanCommands": [
+    "/Users/personal/Library/Android/sdk/cmake/3.18.1/bin/ninja -C \"/Users/personal/prj/demo/CacheEmulatorChecker/antifake/.cxx/cmake/debug/x86_64\" clean"
+  ],
+  "buildTargetsCommand": "/Users/personal/Library/Android/sdk/cmake/3.18.1/bin/ninja  -C \"/Users/personal/prj/demo/CacheEmulatorChecker/antifake/.cxx/cmake/debug/x86_64\" {LIST_OF_TARGETS_TO_BUILD}",
+  "libraries": {
+    "emulator_check-Debug-x86_64": {
+      "artifactName": "emulator_check",
+      "buildCommand": "/Users/personal/Library/Android/sdk/cmake/3.18.1/bin/ninja -C \"/Users/personal/prj/demo/CacheEmulatorChecker/antifake/.cxx/cmake/debug/x86_64\" emulator_check",
+      "abi": "x86_64",
+      "output": "/Users/personal/prj/demo/CacheEmulatorChecker/antifake/build/intermediates/cmake/debug/obj/x86_64/libemulator_check.so",
+      "runtimeFiles": []
+    }
+  }
+}

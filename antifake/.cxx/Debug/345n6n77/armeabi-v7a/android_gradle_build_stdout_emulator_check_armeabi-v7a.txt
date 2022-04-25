@@ -1,0 +1,2 @@
+ninja: Entering directory `/Users/personal/prj/demo/CacheEmulatorChecker/antifake/.cxx/Debug/345n6n77/armeabi-v7a'
+ninja: no work to do.

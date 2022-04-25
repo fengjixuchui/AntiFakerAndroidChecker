@@ -1,0 +1,25 @@
+ninja: Entering directory `/Users/personal/prj/demo/CacheEmulatorChecker/antifake/.cxx/cmake/debug/x86'
+[1/2] Building C object CMakeFiles/emulator_check.dir/src/main/jni/emulator/emcheck64.c.o
+../../../../src/main/jni/emulator/emcheck64.c:72:40: warning: format specifies type 'unsigned int' but the argument has type 'void *' [-Wformat]
+    LOGI(" mmap sucess exec  %x  %d ", exec,(size_t) getpagesize());
+                             ~~        ^~~~
+../../../../src/main/jni/emulator/emcheck64.c:11:67: note: expanded from macro 'LOGI'
+#define LOGI(...) __android_log_print(ANDROID_LOG_ERROR,"lishang",__VA_ARGS__)
+                                                                  ^~~~~~~~~~~
+../../../../src/main/jni/emulator/emcheck64.c:74:13: warning: incompatible pointer to integer conversion initializing 'int' with an expression of type 'FILE *' (aka 'struct __sFILE *') [-Wint-conversion]
+        int fd = fopen("/dev/zero", "w+");
+            ^    ~~~~~~~~~~~~~~~~~~~~~~~~
+../../../../src/main/jni/emulator/emcheck64.c:82:34: warning: format specifies type 'unsigned int' but the argument has type 'void *' [-Wformat]
+    LOGI(" mmap copy  exec  %x", exec);
+                            ~~   ^~~~
+../../../../src/main/jni/emulator/emcheck64.c:11:67: note: expanded from macro 'LOGI'
+#define LOGI(...) __android_log_print(ANDROID_LOG_ERROR,"lishang",__VA_ARGS__)
+                                                                  ^~~~~~~~~~~
+../../../../src/main/jni/emulator/emcheck64.c:84:14: warning: incompatible pointer types assigning to 'int (*)(void)' from 'int *' [-Wincompatible-pointer-types]
+    asmcheck = (int *) exec;
+             ^ ~~~~~~~~~~~~
+../../../../src/main/jni/emulator/emcheck64.c:85:8: warning: implicit declaration of function '__clear_cache' is invalid in C99 [-Wimplicit-function-declaration]
+       __clear_cache(exec, exec+ (size_t) getpagesize() );
+       ^
+5 warnings generated.
+[2/2] Linking C shared library ../../../../build/intermediates/cmake/debug/obj/x86/libemulator_check.so

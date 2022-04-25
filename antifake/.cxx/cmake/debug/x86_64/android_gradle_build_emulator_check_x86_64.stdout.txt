@@ -1,0 +1,40 @@
+ninja: Entering directory `/Users/personal/prj/demo/CacheEmulatorChecker/antifake/.cxx/cmake/debug/x86_64'
+[1/2] Building C object CMakeFiles/emulator_check.dir/src/main/jni/emulator/emcheck64.c.o
+../../../../src/main/jni/emulator/emcheck64.c:29:5: warning: implicitly declaring library function 'memset' with type 'void *(void *, int, unsigned long)' [-Wimplicit-function-declaration]
+    memset(&handler, 0, sizeof(sigaction));
+    ^
+../../../../src/main/jni/emulator/emcheck64.c:29:5: note: include the header <string.h> or explicitly provide a declaration for 'memset'
+../../../../src/main/jni/emulator/emcheck64.c:72:40: warning: format specifies type 'unsigned int' but the argument has type 'void *' [-Wformat]
+    LOGI(" mmap sucess exec  %x  %d ", exec,(size_t) getpagesize());
+                             ~~        ^~~~
+../../../../src/main/jni/emulator/emcheck64.c:11:67: note: expanded from macro 'LOGI'
+#define LOGI(...) __android_log_print(ANDROID_LOG_ERROR,"lishang",__VA_ARGS__)
+                                                                  ^~~~~~~~~~~
+../../../../src/main/jni/emulator/emcheck64.c:72:45: warning: format specifies type 'int' but the argument has type 'size_t' (aka 'unsigned long') [-Wformat]
+    LOGI(" mmap sucess exec  %x  %d ", exec,(size_t) getpagesize());
+                                 ~~         ^~~~~~~~~~~~~~~~~~~~~~
+                                 %zu
+../../../../src/main/jni/emulator/emcheck64.c:11:67: note: expanded from macro 'LOGI'
+#define LOGI(...) __android_log_print(ANDROID_LOG_ERROR,"lishang",__VA_ARGS__)
+                                                                  ^~~~~~~~~~~
+../../../../src/main/jni/emulator/emcheck64.c:74:13: warning: incompatible pointer to integer conversion initializing 'int' with an expression of type 'FILE *' (aka 'struct __sFILE *') [-Wint-conversion]
+        int fd = fopen("/dev/zero", "w+");
+            ^    ~~~~~~~~~~~~~~~~~~~~~~~~
+../../../../src/main/jni/emulator/emcheck64.c:81:5: warning: implicitly declaring library function 'memcpy' with type 'void *(void *, const void *, unsigned long)' [-Wimplicit-function-declaration]
+    memcpy(exec, code,  sizeof(code));
+    ^
+../../../../src/main/jni/emulator/emcheck64.c:81:5: note: include the header <string.h> or explicitly provide a declaration for 'memcpy'
+../../../../src/main/jni/emulator/emcheck64.c:82:34: warning: format specifies type 'unsigned int' but the argument has type 'void *' [-Wformat]
+    LOGI(" mmap copy  exec  %x", exec);
+                            ~~   ^~~~
+../../../../src/main/jni/emulator/emcheck64.c:11:67: note: expanded from macro 'LOGI'
+#define LOGI(...) __android_log_print(ANDROID_LOG_ERROR,"lishang",__VA_ARGS__)
+                                                                  ^~~~~~~~~~~
+../../../../src/main/jni/emulator/emcheck64.c:84:14: warning: incompatible pointer types assigning to 'int (*)(void)' from 'int *' [-Wincompatible-pointer-types]
+    asmcheck = (int *) exec;
+             ^ ~~~~~~~~~~~~
+../../../../src/main/jni/emulator/emcheck64.c:85:8: warning: implicit declaration of function '__clear_cache' is invalid in C99 [-Wimplicit-function-declaration]
+       __clear_cache(exec, exec+ (size_t) getpagesize() );
+       ^
+8 warnings generated.
+[2/2] Linking C shared library ../../../../build/intermediates/cmake/debug/obj/x86_64/libemulator_check.so
