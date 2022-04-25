@@ -1,0 +1,24 @@
+# ninja log v5
+0	138	1650864368	CMakeFiles/emulator_check.dir/src/main/jni/emulator/emcheck64.c.o	3f022f9516133f83
+138	182	1650864368	../../../../build/intermediates/cmake/debug/obj/arm64-v8a/libemulator_check.so	8ae072d8df1afcdd
+0	17	0	clean	be4b84c229401883
+1	287	1650864711	CMakeFiles/emulator_check.dir/src/main/jni/emulator/emcheck64.c.o	3f022f9516133f83
+287	343	1650864711	../../../../build/intermediates/cmake/debug/obj/arm64-v8a/libemulator_check.so	8ae072d8df1afcdd
+0	10	0	clean	be4b84c229401883
+0	271	1650864788	CMakeFiles/emulator_check.dir/src/main/jni/emulator/emcheck64.c.o	3f022f9516133f83
+271	331	1650864788	../../../../build/intermediates/cmake/debug/obj/arm64-v8a/libemulator_check.so	8ae072d8df1afcdd
+0	296	1650865732	CMakeFiles/emulator_check.dir/src/main/jni/emulator/emcheck64.c.o	3f022f9516133f83
+296	358	1650865732	../../../../build/intermediates/cmake/debug/obj/arm64-v8a/libemulator_check.so	8ae072d8df1afcdd
+1	285	1650867400	CMakeFiles/emulator_check.dir/src/main/jni/emulator/emcheck64.c.o	3f022f9516133f83
+285	346	1650867400	../../../../build/intermediates/cmake/debug/obj/arm64-v8a/libemulator_check.so	8ae072d8df1afcdd
+0	291	1650867636	CMakeFiles/emulator_check.dir/src/main/jni/emulator/emcheck64.c.o	3f022f9516133f83
+291	346	1650867636	../../../../build/intermediates/cmake/debug/obj/arm64-v8a/libemulator_check.so	8ae072d8df1afcdd
+1	280	1650867686	CMakeFiles/property_get.dir/src/main/jni/property/proget.c.o	bc9c0ddfd9473f20
+1	286	1650867764	CMakeFiles/property_get.dir/src/main/jni/property/proget.c.o	bc9c0ddfd9473f20
+286	338	1650867764	../../../../build/intermediates/cmake/debug/obj/arm64-v8a/libproperty_get.so	729399911e64eef6
+0	278	1650867823	CMakeFiles/property_get.dir/src/main/jni/property/proget.c.o	bc9c0ddfd9473f20
+279	330	1650867823	../../../../build/intermediates/cmake/debug/obj/arm64-v8a/libproperty_get.so	729399911e64eef6
+1	246	1650867906	CMakeFiles/property_get.dir/src/main/jni/property/proget.c.o	bc9c0ddfd9473f20
+246	298	1650867906	../../../../build/intermediates/cmake/debug/obj/arm64-v8a/libproperty_get.so	729399911e64eef6
+1	253	1650867980	CMakeFiles/property_get.dir/src/main/jni/property/proget.c.o	bc9c0ddfd9473f20
+253	306	1650867980	../../../../build/intermediates/cmake/debug/obj/arm64-v8a/libproperty_get.so	729399911e64eef6

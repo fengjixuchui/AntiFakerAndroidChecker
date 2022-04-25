@@ -1,0 +1,4 @@
+/Users/hzlishang/prj/demo/AntiFakerAndroidChecker/antifake/.cxx/cmake/debug/arm64-v8a/CMakeFiles/rebuild_cache.dir
+/Users/hzlishang/prj/demo/AntiFakerAndroidChecker/antifake/.cxx/cmake/debug/arm64-v8a/CMakeFiles/edit_cache.dir
+/Users/hzlishang/prj/demo/AntiFakerAndroidChecker/antifake/.cxx/cmake/debug/arm64-v8a/CMakeFiles/property_get.dir
+/Users/hzlishang/prj/demo/AntiFakerAndroidChecker/antifake/.cxx/cmake/debug/arm64-v8a/CMakeFiles/emulator_check.dir

@@ -1,0 +1,43 @@
+{
+  "stringTable": {
+    "0": "/Users/hzlishang/prj/demo/AntiFakerAndroidChecker/antifake/.cxx/cmake/debug/x86",
+    "1": "--target=i686-none-linux-android16 --gcc-toolchain=/Users/hzlishang/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/hzlishang/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -Demulator_check_EXPORTS -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mstackrealign -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security -O0 -fno-limit-debug-info -fPIC"
+  },
+  "buildFiles": [
+    "/Users/hzlishang/prj/demo/AntiFakerAndroidChecker/antifake/CMakeLists.txt",
+    "/Users/hzlishang/Library/Android/sdk/ndk/21.1.6352462/build/cmake/android.toolchain.cmake",
+    "/Users/hzlishang/Library/Android/sdk/ndk/21.1.6352462/build/cmake/platforms.cmake"
+  ],
+  "cleanCommands": [
+    "/Users/hzlishang/Library/Android/sdk/cmake/3.18.1/bin/ninja -C \"/Users/hzlishang/prj/demo/AntiFakerAndroidChecker/antifake/.cxx/cmake/debug/x86\" clean"
+  ],
+  "buildTargetsCommand": "/Users/hzlishang/Library/Android/sdk/cmake/3.18.1/bin/ninja  -C \"/Users/hzlishang/prj/demo/AntiFakerAndroidChecker/antifake/.cxx/cmake/debug/x86\" {LIST_OF_TARGETS_TO_BUILD}",
+  "libraries": {
+    "emulator_check-Debug-x86": {
+      "buildCommand": "/Users/hzlishang/Library/Android/sdk/cmake/3.18.1/bin/ninja -C \"/Users/hzlishang/prj/demo/AntiFakerAndroidChecker/antifake/.cxx/cmake/debug/x86\" emulator_check",
+      "buildType": "debug",
+      "toolchain": "1500933753",
+      "abi": "x86",
+      "artifactName": "emulator_check",
+      "files": [
+        {
+          "src": "/Users/hzlishang/prj/demo/AntiFakerAndroidChecker/antifake/src/main/jni/emulator/emcheck64.c",
+          "flagsOrdinal": 1,
+          "workingDirectoryOrdinal": 0
+        }
+      ],
+      "headers": [],
+      "output": "/Users/hzlishang/prj/demo/AntiFakerAndroidChecker/antifake/build/intermediates/cmake/debug/obj/x86/libemulator_check.so",
+      "runtimeFiles": []
+    }
+  },
+  "toolchains": {
+    "1500933753": {
+      "cCompilerExecutable": "/Users/hzlishang/Library/Android/sdk/ndk/21.1.6352462/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang"
+    }
+  },
+  "cFileExtensions": [
+    "c"
+  ],
+  "cppFileExtensions": []
+}

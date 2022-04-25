@@ -1,0 +1,3 @@
+/Users/hzlishang/prj/demo/AntiFakerAndroidChecker/antifake/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/rebuild_cache.dir
+/Users/hzlishang/prj/demo/AntiFakerAndroidChecker/antifake/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/edit_cache.dir
+/Users/hzlishang/prj/demo/AntiFakerAndroidChecker/antifake/.cxx/cmake/debug/armeabi-v7a/CMakeFiles/emulator_check.dir

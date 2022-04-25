@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/Users/hzlishang/prj/demo/AntiFakerAndroidChecker/antifake/.cxx/Debug/2j4z5u2l/arm64-v8a",
+  "command": "/Users/hzlishang/Library/Android/sdk/ndk/21.4.7075529/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang --target=aarch64-none-linux-android21 --gcc-toolchain=/Users/hzlishang/Library/Android/sdk/ndk/21.4.7075529/toolchains/llvm/prebuilt/darwin-x86_64 --sysroot=/Users/hzlishang/Library/Android/sdk/ndk/21.4.7075529/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -Demulator_check_EXPORTS -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -O0 -fno-limit-debug-info  -fPIC -o CMakeFiles/emulator_check.dir/src/main/jni/emulator/emcheck64.c.o -c /Users/hzlishang/prj/demo/AntiFakerAndroidChecker/antifake/src/main/jni/emulator/emcheck64.c",
+  "file": "/Users/hzlishang/prj/demo/AntiFakerAndroidChecker/antifake/src/main/jni/emulator/emcheck64.c"
+}
+]

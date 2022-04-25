@@ -1,0 +1,18 @@
+ninja: Entering directory `/Users/hzlishang/prj/demo/AntiFakerAndroidChecker/antifake/.cxx/cmake/debug/arm64-v8a'
+[1/2] Building C object CMakeFiles/emulator_check.dir/src/main/jni/emulator/emcheck64.c.o
+../../../../src/main/jni/emulator/emcheck64.c:29:5: warning: implicitly declaring library function 'memset' with type 'void *(void *, int, unsigned long)' [-Wimplicit-function-declaration]
+    memset(&handler, 0, sizeof(sigaction));
+    ^
+../../../../src/main/jni/emulator/emcheck64.c:29:5: note: include the header <string.h> or explicitly provide a declaration for 'memset'
+../../../../src/main/jni/emulator/emcheck64.c:74:13: warning: incompatible pointer to integer conversion initializing 'int' with an expression of type 'FILE *' (aka 'struct __sFILE *') [-Wint-conversion]
+        int fd = fopen("/dev/zero", "w+");
+            ^    ~~~~~~~~~~~~~~~~~~~~~~~~
+../../../../src/main/jni/emulator/emcheck64.c:81:5: warning: implicitly declaring library function 'memcpy' with type 'void *(void *, const void *, unsigned long)' [-Wimplicit-function-declaration]
+    memcpy(exec, code,  sizeof(code));
+    ^
+../../../../src/main/jni/emulator/emcheck64.c:81:5: note: include the header <string.h> or explicitly provide a declaration for 'memcpy'
+../../../../src/main/jni/emulator/emcheck64.c:84:14: warning: incompatible pointer types assigning to 'int (*)(void)' from 'int *' [-Wincompatible-pointer-types]
+    asmcheck = (int *) exec;
+             ^ ~~~~~~~~~~~~
+4 warnings generated.
+[2/2] Linking C shared library ../../../../build/intermediates/cmake/debug/obj/arm64-v8a/libemulator_check.so

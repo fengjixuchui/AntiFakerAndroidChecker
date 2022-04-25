@@ -1,0 +1,3 @@
+/Users/hzlishang/prj/demo/AntiFakerAndroidChecker/antifake/.cxx/Debug/2j4z5u2l/x86/CMakeFiles/rebuild_cache.dir
+/Users/hzlishang/prj/demo/AntiFakerAndroidChecker/antifake/.cxx/Debug/2j4z5u2l/x86/CMakeFiles/edit_cache.dir
+/Users/hzlishang/prj/demo/AntiFakerAndroidChecker/antifake/.cxx/Debug/2j4z5u2l/x86/CMakeFiles/emulator_check.dir

@@ -1,0 +1,2 @@
+ninja: Entering directory `/Users/hzlishang/prj/demo/AntiFakerAndroidChecker/antifake/.cxx/Debug/2j4z5u2l/arm64-v8a'
+ninja: no work to do.
