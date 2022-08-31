@@ -3,29 +3,20 @@ package com.snail.device;
 import android.Manifest;
 import android.annotation.SuppressLint;
 import android.app.Activity;
-import android.app.Service;
-import android.content.ComponentName;
 import android.content.Context;
-import android.content.Intent;
-import android.content.ServiceConnection;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
-import android.os.IBinder;
-import android.os.RemoteException;
 import android.provider.Settings;
 import android.telephony.TelephonyManager;
 import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 
-import com.snail.antifake.IEmulatorCheck;
 import com.snail.antifake.deviceid.AndroidDeviceIMEIUtil;
-import com.snail.antifake.deviceid.IpScanner;
 import com.snail.antifake.deviceid.androidid.IAndroidIdUtil;
 import com.snail.antifake.deviceid.androidid.ISettingUtils;
 import com.snail.antifake.deviceid.deviceid.DeviceIdUtil;
@@ -34,11 +25,8 @@ import com.snail.antifake.deviceid.deviceid.ITelephonyUtil;
 import com.snail.antifake.deviceid.emulator.EmuCheckUtil;
 import com.snail.antifake.deviceid.macaddress.IWifiManagerUtil;
 import com.snail.antifake.deviceid.macaddress.MacAddressUtils;
-import com.snail.antifake.jni.EmulatorCheckService;
 import com.snail.antifake.jni.EmulatorDetectUtil;
 import com.snail.antifake.jni.PropertiesGet;
-
-import java.util.Map;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -50,28 +38,54 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         mActivity = this;
+        /**
+         *  子进程检测是否是模拟器，不影响UI线程
+         */
+        findViewById(R.id.btn_async_simu).setOnClickListener(v -> EmuCheckUtil.checkEmulatorFromCache(getApplicationContext(),
+                new EmuCheckUtil.CheckEmulatorCallBack() {
+                    @Override
+                    public void onCheckSuccess(boolean isEmulator) {
+                        TextView textView = (TextView) findViewById(R.id.btn_async_simu);
+                        textView.setText("  内存异步非UI进程获取是否模拟器 " + isEmulator);
+                    }
 
-        findViewById(R.id.btn_async_simu).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                Intent intent = new Intent(MainActivity.this, EmulatorCheckService.class);
-                bindService(intent, serviceConnection, Service.BIND_AUTO_CREATE);
-
-            }
-        });
-
+                    @Override
+                    public void onCheckFaild() {
+                        TextView textView = (TextView) findViewById(R.id.btn_async_simu);
+                        textView.setText("  内存异步非UI进程获取是否模拟器 失败");
+                    }
+                }));
+        /**
+         *  UI进程检测，可能影响UI线程
+         */
         findViewById(R.id.btn_sycn_syc_simu).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 for (int i = 0; i < 100; i++) {
                     TextView textView = (TextView) findViewById(R.id.btn_sycn_syc_simu);
-                    textView.setText(" 同步获取是否模拟器 " + EmulatorDetectUtil.isEmulator(MainActivity.this));
+                    textView.setText(" 内存同步是否模拟器 " + EmulatorDetectUtil.isEmulator(MainActivity.this));
                 }
 
             }
         });
+//        特征值判断是否模拟器
+        findViewById(R.id.btn_sample).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                TextView textView = (TextView) findViewById(R.id.btn_sample);
+                textView.setText("特征信息判断是否模拟器 " + AndroidDeviceIMEIUtil.isRunOnEmulator(MainActivity.this));
+            }
+        });
+//        综合判断一次
+        findViewById(R.id.btn_sycn_integer).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                TextView textView = (TextView) findViewById(R.id.btn_sycn_integer);
+                textView.setText("综合判断是否模拟器 " + EmulatorDetectUtil.isEmulatorFromAll(MainActivity.this));
+            }
+        });
 
+        //获取其他硬件信息
         findViewById(R.id.btn_hwinfo).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -79,35 +93,9 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        findViewById(R.id.btn_sycn_integer).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                TextView textView = (TextView) findViewById(R.id.btn_sycn_integer);
-                textView.setText(" 是否模拟器 " + EmulatorDetectUtil.isEmulatorFromAll(MainActivity.this));
-            }
-        });
         requestGetInfo();
     }
 
-    final ServiceConnection serviceConnection = new ServiceConnection() {
-        @Override
-        public void onServiceConnected(ComponentName name, IBinder service) {
-            IEmulatorCheck emulatorCheck = IEmulatorCheck.Stub.asInterface(service);
-            if (emulatorCheck != null) {
-                try {
-                    TextView textView = (TextView) findViewById(R.id.btn_async_simu);
-                    textView.setText(" 异步非UI进程获取是否模拟器 " + emulatorCheck.isEmulator());
-                    unbindService(this);
-                } catch (RemoteException e) {
-                    Toast.makeText(MainActivity.this, "获取进程崩溃", Toast.LENGTH_SHORT).show();
-                }
-            }
-        }
-
-        @Override
-        public void onServiceDisconnected(ComponentName name) {
-        }
-    };
 
     @Override
     public void onRequestPermissionsResult(int requestCode,
